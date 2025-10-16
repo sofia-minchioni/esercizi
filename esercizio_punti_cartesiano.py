@@ -34,13 +34,37 @@ print (x[indice_min],minimo)
 
         
     
-
 punti_cartesiano=[]
 for i in range(0,20):
     punto=(random.randint(0,10),random.randint(0,10))
     punti_cartesiano.append(punto)
     
 #come accedere alla x del primo punto il primo è la coppia
-print(punti_cartesiano[0][0])
-#come accedere alla y del primo punto il secondo è il punto specifico della coppia
-print(punti_cartesiano[0][1])
+#print(punti_cartesiano[0][0])
+#come accedere alla y del primo punto,il secondo è il punto specifico della coppia
+#print(punti_cartesiano[0][1])
+    
+massimo2=punti_cartesiano[0]
+for i in range(1,20):
+    if punti_cartesiano[i][0]>massimo2[0]:
+        massimo2=punti_cartesiano[i]
+print(massimo2)
+
+minimo2=punti_cartesiano[0]
+for i in range(1,20):
+    if punti_cartesiano[i][1]<minimo2[1]:
+        minimo2=punti_cartesiano[i]
+        
+print(minimo2)
+
+
+    
+    
+    
+
+
+
+
+
+
+
