@@ -11,11 +11,24 @@ def pariLista (lista):
         if element%2==0:
             sommapari=sommapari+1
     print(sommapari)
+#scrivere una procedura che data una lista e un numero chiamato alfa stampi a video il numero
+#degli elementi della lista più grandi di alfa    
+def contaMaggioreAlfa(lista,alfa):
+    sommanumeri=0
+    alfa=2
+    for element in lista:
+        if element>alfa:
+            sommanumeri=sommanumeri+1
+    print(sommanumeri)
+    
 
 lista=[1,2,3,4]
 sommaLista(lista)
 pariLista(lista)
+contaMaggioreAlfa(lista,2)
 #ho richiamato la funzione sommaLista, quello dentro le parentesi si chiama parametro
 lista2=[2,3,4,5]
 sommaLista(lista2)
+
+
 
