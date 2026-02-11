@@ -3,7 +3,7 @@
 #sopra una certa soglia fissata a massimo delle misurazioni meno 10
 
 #sottoproblemi:
-#1)creare una lista di 10 misurazioni rando(procedura, perche le liste sono passati per riferimento)
+#1)creare una lista di 10 misurazioni random(procedura, perche le liste sono passati per riferimento)
 #2)media dei valori di una lista(funzione)
 #3)calcolare la soglia [massimo della lista - 10] (funzione)
 #4)contare il numero di valori sopra la soglia(procedura)
@@ -26,14 +26,38 @@ def calcolo_media(lista):
         somma=somma+lista[i]
     media=somma/len(lista)
     return(media)
+
+def massimoLista(lista):
+    massimo=lista[0]
+    for i in range(0,10):
+        if lista[i]>massimo:
+            massimo=lista[i]
+    print("massimo:", massimo)
+
+def calcolaSoglia(lista):
+    massimo=lista[0]
+    for i in range(0,10):
+        if lista[i]>massimo:
+            massimo=lista[i]
+    soglia=massimo-10
+    return(soglia)
     
+def valoriSopraSoglia(lista,soglia):
+    contatore=0
+    for i in range(0,len(lista)):
+        if soglia<lista[i]:
+            contatore=contatore+1
+    print("i valori superoiori alla soglia sono:",contatore)
+            
     
 if __name__=="__main__":
     listaM=[]
     creaLista(listaM)
     mediaValori=calcolo_media(listaM)
-    
-
+    massimoLista(listaM)
+    soglia=calcolaSoglia(listaM)
+    print("Soglia:",soglia)
+    valoriSopraSoglia(listaM,soglia)
 
 
 
